@@ -14,8 +14,6 @@ sudo dscl . -passwd /Users/vncuser $1
 sudo dscl . -passwd /Users/vncuser $1
 sudo createhomedir -c -u vncuser > /dev/null
 
-sudo dscl . -passwd /Users/runner $1
-
 #Enable VNC
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -allowAccessFor -allUsers -privs -all
 sudo /System/Library/CoreServices/RemoteManagement/ARDAgent.app/Contents/Resources/kickstart -configure -clientopts -setvnclegacy -vnclegacy yes 
